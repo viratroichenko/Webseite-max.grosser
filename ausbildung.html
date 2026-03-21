@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ausbildung – Max Großer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu';
+  background: #ffffff;
+  color: #003366;
+  line-height: 1.9;
+}
+
+h1, h2, h3 {
+  font-family: 'Ubuntu';
+  letter-spacing: 2px;
+  font-size: 28px;
+  color: #002244;
+  margin-bottom: 20px;
+}
+
+p, li {
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  line-height: 1.9;
+  color: #003366;
+}
+
+ul {
+  list-style: disc inside;
+  text-align: center;
+  max-width: 700px;
+  margin: 25px auto 40px auto;
+  line-height: 1.9;
+  font-size: 20px;
+}
+
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.images-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 51, 102, 0.2);
+  transition: 0.3s;
+}
+
+.images-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .brand {
+  font-family: 'Ubuntu';
+  font-size: 28px;
+  color: #003366;
+  letter-spacing: 3px;
+}
+
+header a.back {
+  margin-left: auto;
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid #003366;
+  padding: 10px 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+header a.back:hover {
+  background: #003366;
+  color: #fff;
+}
+
+
+.section {
+  padding: 140px 20px 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.footer {
+  margin-top: 60px;
+  padding: 50px 20px;
+  border-top: 1px solid rgba(0,51,102,0.2);
+  font-size: 20px;
+  color: #003366;
+  text-align: center;
+  opacity: 0.8;
+}
+
+
+@media(max-width:768px){
+  .images-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Ubuntu';
+  color: #003366;
+  font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select,
+.contact-form label,
+.contact-form .file-text,
+.contact-form .file-icon {
+  color: #003366;
+  font-family: 'Ubuntu';
+  font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 12px;
+  border: 1px solid #003366;
+  border-radius: 6px;
+  color: #003366;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #003366;
+  opacity: 0.7;
+}
+
+.contact-form button.send {
+  padding: 14px;
+  font-family: 'Ubuntu';
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button.send:hover {
+  background-color: #0055aa;
+}
+
+
+.file-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border: 1px solid #003366;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Ubuntu';
+  color: #003366;
+}
+
+.file-label:hover {
+  background-color: #f0f8ff;
+}
+
+.file-label input[type="file"] {
+  display: none;
+}
+
+.file-text {
+  font-family: 'Ubuntu';
+  font-size: 16px;
+  color: #003366;
+}
+
+.file-icon {
+  font-size: 18px;
+  color: #003366;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select,
+.contact-form label,
+.contact-form .file-text,
+.contact-form .file-icon,
+.contact-form button.send {
+  font-family: 'Ubuntu';  
+  color: #003366;         
+  font-size: 16px;       
+}
+
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #003366; 
+  background-color: #f9f9f9;
+}
+
+
+.file-label {
+  font-family: 'Ubuntu';
+  color: #003366;   /* такой же синий */
+  background-color: #f9f9f9;
+  
+}
+
+
+.contact-form button.send {
+  background-color: #003366; 
+  color: #ffffff;            
+  font-family: 'Ubuntu';
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Ausbildung – Max Großer</div>
+  <a href="index.html" class="back">← Zurück</a>
+</header>
+
+<section class="section">
+  <h1>Ausbildung bei Max Großer</h1>
+  <p>Erfahren Sie alles über die Ausbildung zum Anlagenmechaniker für Sanitär-, Heizungs- und Klimatechnik.</p>
+
+  <h2>Was wird gemacht?</h2>
+  <p>Während der Ausbildung lernen Sie:</p>
+  <ul>
+    <li>Installation, Wartung und Reparatur von Sanitär- und Heizungsanlagen</li>
+    <li>Planung und Umsetzung von modernen Bädern und Heizsystemen</li>
+    <li>Einbau von Klimaanlagen und erneuerbaren Energien</li>
+    <li>Dokumentation und Beratung der Kunden</li>
+    <li>Sicherheits- und Qualitätskontrollen durchführen</li>
+  </ul>
+
+  <h2>Benötigte Dokumente</h2>
+  <p>Für Ihre Bewerbung benötigen Sie:</p>
+  <ul>
+    <li>Lebenslauf*</li>
+    <li>Letztes Schulzeugnis*</li>
+    <li>Motivationsschreiben*</li>
+    <li>Optional: Praktikums- oder Arbeitsbescheinigungen</li>
+  </ul>
+
+  
+
+  <h2 style="margin-top:60px;">Kontaktformular</h2>
+  <p>Haben Sie Fragen zur Ausbildung oder möchten sich bewerben? Schreiben Sie uns!</p>
+<form action="sendmail.php" method="POST" enctype="multipart/form-data" class="contact-form">
+  <input type="text" name="name" placeholder="Ihr Name" required>
+  <input type="email" name="email" placeholder="Ihre Email" required>
+  <input type="tel" name="phone" placeholder="Ihre Telefonnummer" required>
+  <input type="hidden" name="subject" value="Ausbildung">
+
+  <label class="file-label">
+    <span class="file-text">Lebenslauf auswählen</span>
+    <input type="file" name="lebenslauf" accept=".pdf,.jpg,.jpeg,.png"  required>
+    <span class="file-icon">📎</span>
+  </label>
+
+  <label class="file-label">
+    <span class="file-text">Letztes Schulzeugnis auswählen</span>
+    <input type="file" name="zeugnis" accept=".pdf,.jpg,.jpeg,.png" required>
+    <span class="file-icon">📎</span>
+  </label>
+
+  <label class="file-label">
+    <span class="file-text">Motivationsschreiben auswählen</span>
+    <input type="file" name="motivationsschreiben" accept=".pdf,.jpg,.jpeg,.png"  required>
+    <span class="file-icon">📎</span>
+  </label>
+
+  <textarea name="message" rows="4" placeholder="Ihre Nachricht (optional)"></textarea>
+  <button type="submit" class="send">Nachricht senden</button>
+</form>
+</section>
+
+<div class="footer">
+  <p>
+    © Max Großer – Ihr Meisterfachbetrieb aus Schöningen | 
+    <a href="impressum.html" style="color:#003366; text-decoration:underline;">Impressum</a> | 
+    <a href="datenschutz.html" style="color:#003366; text-decoration:underline;">Datenschutz</a> | 
+    <a href="cookies.html" style="color:#003366; text-decoration:underline;">Cookie Einstellungen</a>
+  </p>
+</div>
+
+</body>
+</html>

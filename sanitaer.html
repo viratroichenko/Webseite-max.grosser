@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanitär – Max Großer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Ubuntu';
+  background:#ffffff;
+  color:#003366;
+}
+h1,h2,h3{
+  font-family:'Ubuntu';
+  letter-spacing:2px;
+  color:#002244;
+  font-size:28px;
+}
+body, p, li, span, a {
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  line-height: 1.5;
+  color: #003366;
+}
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(255,255,255,0.95);
+  padding:15px 30px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  display:flex;
+  align-items:center;
+  z-index:1000;
+}
+header .brand{
+  font-family:'Ubuntu';
+  font-size:28px;
+  color:#003366;
+  letter-spacing:3px;
+}
+header a.back{
+  margin-left:auto;
+  text-decoration:none;
+  color:#003366;
+  font-weight:bold;
+  font-size:16px;
+  border:1px solid #003366;
+  padding:8px 15px;
+  border-radius:5px;
+  transition:0.3s;
+}
+header a.back:hover{
+  background:#003366;
+  color:#fff;
+}
+.section{
+  padding:120px 20px 60px 20px;
+  max-width:1000px;
+  margin:0 auto;
+  text-align:center;
+}
+.images-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+.images-grid img{
+  width:100%;
+  height:auto;
+  border-radius:10px;
+  border:1px solid rgba(0,51,102,0.2);
+  transition:0.3s;
+}
+.images-grid img:hover{
+  transform:scale(1.05);
+}
+.footer{
+  margin-top:40px;
+  padding:40px 20px;
+  border-top:1px solid rgba(0,51,102,0.2);
+  font-size:14px;
+  color:#003366;
+  text-align:center;
+  opacity:0.8;
+}
+@media(max-width:768px){
+  .images-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+.text-image-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-image-item .text {
+  flex: 1;
+}
+
+.text-image-item .text h3 {
+  font-family: 'Ubuntu';
+  font-size: 22px;
+  color: #002244;
+  margin-bottom: 10px;
+}
+
+.text-image-item .text p {
+  font-family:'Ubuntu';
+  font-size: 20px;
+  color: #003366;
+  line-height: 1.5;
+}
+
+.text-image-item .image {
+  flex: 1;
+}
+
+.text-image-item .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(0,51,102,0.2);
+}
+
+@media(max-width:768px){
+  .text-image-item {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Sanitär – Max Großer</div>
+  <a href="index.html" class="back">← Zurück</a>
+</header>
+
+<section class="section">
+  <h1>Sanitär Leistungen</h1>
+  <p>Installation, Wartung und Modernisierung von Heizsystemen.</p>
+
+ <div class="text-image-block">
+  <div class="text-image-item">
+    <div class="text">
+      <h3>Bringen Sie frischen Wind in Ihr Badezimmer! </h3>
+      <p>Das Bad ist eine langfristige Investition, an der Sie auch nach Jahren Freude haben sollen.
+Gerne beraten wir Sie bei der individuellen Gestaltung Ihres Traumbades.
+Ob im Altbau, Neubau oder Ein- und Mehrfamilienhaus.
+Ein wichtiges Thema dabei ist die Barrierefreie Badgestalltung.</p>
+    </div>
+    <div class="image">
+      <img src="sanitar1 (1).png" alt="Sanitar Bild 1">
+    </div>
+  </div>
+
+  <div class="text-image-item">
+    <div class="text">
+      <h3>Sauberes Trinkwasser</h3>
+      <p>Eine zuverlässige Trink- und Abwasserinstallation ist nicht nur unerlässlich, sondern sollte selbstverständlich sein.
+Der Einbau eines Trinkwasserfilters und die vorschriftmäßige Wartung spielen dabei eine wichtige Rolle. Hauswasserfeinfilter sind daher nach DIN 1988 in die Trinkwasseranlagen vorgeschrieben.
+Durch gefiltertes Wasser, kann die Lebensdauer Ihrer Rohrleitungen erheblich verlängert werden. Da Ablagerungen beim Filterprozess effektiv aus dem Wasser entfernt werden, können sich diese von nun an nicht mehr an den Rohren festsetzen und diese beeinträchtigen. Dazu schützt er auch ihre Wasch- und Spülmaschinen!</p>
+    </div>
+    <div class="image">
+      <img src="sanitar2.jpg" alt="Sanitar Bild 2">
+    </div>
+  </div>
+
+  <div class="text-image-item">
+    <div class="text">
+      <h3>Rohrleitungen, Wasser- und Abwasseranschlüsse verlegen und reparieren</h3>
+      <p>Sprechen Sie uns gerne an wenn es darum geht eine Aussenzapfstelle herzustellen oder wenn Wasseranschlüsse z.B. in der Küche verlegt werden müssen.
+Natürlich kümmern wir uns auch um tropfende Wasserhähne oder undichte Wasserleitungen bis hin zum Wasserrohrbruch.
+Unser Meisterfachbetrieb ist Ihr kompetenter Ansprechpartner in allen Belangen der Wasserver- und -entsorgung.</p>
+    </div>
+    <div class="image">
+      <img src="sanitar3 (1).png" alt="Sanitar Bild 3">
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>
+    © Max Großer – Ihr Meisterfachbetrieb aus Schöningen | 
+    <a href="impressum.html" style="color:#003366; text-decoration:underline;">Impressum</a> | 
+    <a href="datenschutz.html" style="color:#003366; text-decoration:underline;">Datenschutz</a> | 
+    <a href="cookies.html" style="color:#003366; text-decoration:underline;">Cookie Einstellungen</a>
+  </p>
+</div>
+
+</body>
+</html>
