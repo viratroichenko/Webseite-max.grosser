@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Großer – Meisterbetrieb</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;
+}
+ 
+body{
+  background:#ffffff; 
+  color:#003366; 
+  font-family:'Ubuntu';
+  
+}
+
+h1,h2,h3{
+  font-family:'Ubuntu';
+  letter-spacing:1px;
+  color:#002244; 
+}
+
+
+header{
+    
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  align-items:center;
+  padding:15px 30px;
+  background:rgba(255,255,255,0.95); 
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  z-index:1000;
+}
+
+
+.services-grid {
+    font-size:20px;
+    
+    }
+
+.content {
+     font-size:20px;
+}
+.map-button {
+       font-size:20px;
+    }
+
+header img.wolf-logo{
+  height:50px;
+  margin-right:20px;
+}
+
+header .brand{
+  font-family:'Ubuntu';
+ font-size:35px;
+  font-weight:700;     
+  letter-spacing:2px;  
+  color:#003366;
+}
+
+.nav{
+  display:flex;
+  gap:30px;
+  margin-left:auto;
+}
+.start-text h2{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.start-text p{
+  font-size:20px;
+}
+.nav a{
+  color:#003366;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:15px;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  color:#0055aa;
+}
+
+
+.burger{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  margin-left:auto;
+  color:#003366;
+}
+
+
+@media(max-width:768px){
+  header img.wolf-logo{
+    height:35px;
+    margin-right:10px;
+  }
+
+  header .brand{
+    font-size:22px;
+  }
+
+  .nav{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:#f0f8ff; 
+    flex-direction:column;
+    width:100%;
+    padding:20px;
+    display:none;
+  }
+
+  .nav.active{
+    display:flex;
+  }
+
+  .burger{
+    display:block;
+  }
+}
+
+
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  margin-top:80px;
+}
+
+.logo-container{
+  width:90%;
+  max-width:1200px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:0.5s;
+}
+
+.logo-container img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  transition:0.5s;
+}
+
+.logo-container:hover img{
+  transform:scale(1.05);
+}
+
+
+.section{
+  min-height:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.content{
+  max-width:1000px;
+  width:100%;
+}
+
+
+.about-container{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  align-items:center;
+}
+
+.about-text{
+  line-height:1.7;
+  font-size:20px;
+  opacity:0.9;
+  color:#003366;
+}
+
+
+.services-grid{
+    display:grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px; 
+    margin-top:30px; } 
+    
+    .service-card{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center; 
+        padding:20px; 
+        border:1px 
+        solid rgba(0,51,102,0.2); 
+        border-radius:10px;
+        text-align:center;
+        text-decoration:none;
+        color:#003366;
+        transition:0.3s; } 
+        
+        .service-card:hover
+        { border-color:#003366; 
+        box-shadow:0 0 20px rgba(0,51,102,0.2); 
+        }
+
+
+.ausbildung-card{
+  max-width:400px;
+  margin:40px auto 0 auto;
+  padding:20px;
+  border:1px solid rgba(0,51,102,0.2);
+  border-radius:10px;
+  text-align:center;
+  transition:0.3s;
+  display:block;
+  color:#003366;
+  text-decoration:none;
+}
+.ausbildung-card:hover{
+  border-color:#003366;
+  box-shadow:0 0 20px rgba(0,51,102,0.2);
+}
+
+
+.stat{
+  text-align:center;
+}
+
+.stat span{
+  font-size:90px;
+  display:block;
+  font-family:'Ubuntu';
+  margin-bottom:10px;
+  color:#002244;
+}
+.stat p{
+  font-size:20px;      
+  font-weight:700;     
+  letter-spacing:1px;  
+  margin-top:5px;
+   font-family:'Ubuntu';
+}
+
+
+.faq-item{
+  margin:15px 0;
+  text-align:left;
+  border-bottom:1px solid rgba(0,51,102,0.1);
+  padding-bottom:10px;
+}
+
+.faq-item button{
+  background:none;
+  border:none;
+  color:#003366;
+  font-size:20px;
+  font-family:'Ubuntu';
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  padding:10px 0;
+}
+.answer{
+  max-height:0;
+  overflow:hidden;
+  transition:0.4s ease;
+  opacity:0.8;
+  color:#003366;
+}
+
+.arrow{
+  display:inline-block;
+  transition:0.3s;
+  transform:rotate(0deg);
+  font-weight:bold;
+}
+
+.faq-item.active .answer{
+  max-height:300px;
+  margin-top:10px;
+}
+
+.faq-item.active .arrow{
+  transform:rotate(90deg);
+}
+
+
+.contact-info p{
+  margin:10px 0;
+  color:#003366;
+  font-size:20px;
+}
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  margin-top:30px;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+form textarea{
+  grid-column:1 / 3;
+}
+
+form button{
+  grid-column:1 / 3;
+}
+
+input, textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #003366;
+  border-radius:6px;
+  font-family:'Ubuntu';
+  color:#003366;
+  background:#f0f8ff;
+  font-size:16px;
+  margin-bottom:10px;
+  margin:10px 0 0 0;
+}
+button.send{
+  width:100%;
+}
+@media(max-width:768px){
+
+form{
+grid-template-columns:1fr;
+}
+
+form textarea,
+form button{
+grid-column:1;
+}
+
+}
+button.send{
+  background:#003366;
+  color:white;
+  padding:12px;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+  font-family:'Ubuntu';
+  font-size:15px;    
+  transition:0.3s;
+}
+
+button.send:hover{
+  background:#0055aa;
+}
+
+
+.footer{
+  margin-top:40px;
+  padding:40px 20px;
+  border-top:1px solid rgba(0,51,102,0.2);
+  font-size:20px;
+  opacity:0.8;
+  text-align:center;
+  color:#003366;
+}
+
+@media (max-width: 768px) {
+
+  
+  .services-grid,
+  .ausbildung-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    width: 100%;
+    align-items: center;    
+  }
+
+  .service-card,
+  .ausbildung-card {
+    width: 95%;        
+    max-width: 500px;  
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  
+  .premium-reviews .reviews-container,
+  .stat,
+  .map-section {
+    width: 100%;
+    max-width: 1100px;  
+    margin: 0 auto;      
+  }
+
+
+  .slider .slide {
+    padding: 20px;
+  }
+
+  
+  .map-container {
+    height: 300px;
+  }
+
+
+  button.send {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+}
+
+
+.premium-reviews{
+  padding:80px 20px;
+  background:#ffffff;
+}
+
+.reviews-container{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.reviews-top{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.reviews-top h2{
+  margin-bottom:15px;
+}
+
+.rating-box{
+  display:inline-block;
+  padding:15px 30px;
+  border:1px solid rgba(0,51,102,0.2);
+  border-radius:50px;
+  background:#f0f8ff;
+}
+
+.reviews-top {
+  text-align: center;
+}
+
+.rating-number{
+  font-size:20px;
+  font-family:'Ubuntu';
+  margin-right:10px;
+}
+
+.stars{
+  color:#fbbc05;
+  letter-spacing:3px;
+}
+
+.slider{
+  position:relative;
+  overflow:hidden;
+}
+
+.slides{
+  display:flex;
+  transition:transform 0.6s ease;
+}
+
+.slide{
+  min-width:100%;
+  padding:40px;
+  border:1px solid rgba(0,51,102,0.2);
+  border-radius:15px;
+  background:#ffffff;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.slide:hover{
+  box-shadow:0 10px 30px rgba(0,51,102,0.15);
+}
+
+.review-text{
+  font-size:20px;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+
+.author{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:20px;
+}
+
+.slider-buttons{
+  margin-top:30px;
+  text-align:center;
+}
+
+.slider-buttons button{
+  background:#003366;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  margin:0 10px;
+  cursor:pointer;
+  border-radius:5px;
+  transition:0.3s;
+}
+
+.slider-buttons button:hover{
+  background:#0055aa;
+}
+
+.map-button {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.map-button button {
+  padding: 12px 28px;
+  background: #111;
+  color: #003366;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.map-button button:hover {
+  background: #003366;
+}
+
+
+
+.map-section {
+  padding: 80px 5%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 1100px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+.map-button {
+  margin-top: 25px;
+}
+
+.map-button button {
+    font-family:'Ubuntu';
+  padding: 14px 32px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #003366;
+  font-weight: bold;
+}
+
+.map-button button:hover {
+  background: #003366;
+  transform: translateY(-3px);
+}
+
+
+
+.map-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+
+.popup-content {
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 25px 80px rgba(0,0,0,0.15);
+  animation: popupFade 0.3s ease;
+}
+.popup-content h3 {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+
+.popup-content a {
+  display: block;
+  margin: 12px 0;
+  padding: 12px;
+  background: #f3f3f3;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.popup-content a:hover {
+  background: #e6e6e6;
+  transform: translateY(-2px);
+}
+
+
+
+.close-btn {
+  margin-top: 18px;
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  .map-container {
+    height: 350px;
+  }
+
+  .popup-content {
+    width: 90%;
+  }
+
+}
+
+.start-text p {
+  line-height: 2.1;   
+}
+
+.about-text p {
+  line-height: 2.1;
+}
+
+.geschäftszeiten p {
+  font-size:20px;
+  line-height: 2.1;
+}
+}
+.faq-title{
+  font-family:'Ubuntu';
+  letter-spacing:1px;
+}
+
+.kontakt-section{
+max-width:700px;
+margin:80px auto;
+padding:20px;
+text-align:center;
+}
+
+.kontakt-form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+
+.kontakt-form textarea{
+width:100%;
+padding:18px;
+border-radius:10px;
+border:2px solid #2b4464;
+background:#e4ecf5;
+font-size:16px;
+}
+
+.kontakt-form textarea{
+height:160px;
+resize:none;
+}
+
+.kontakt-form button{
+margin-top:10px;
+padding:18px;
+background:#0d3b6f;
+color:white;
+border:none;
+border-radius:6px;
+font-size:18px;
+cursor:pointer;
+gap:15px;
+}
+
+.kontakt{
+max-width:700px;
+margin:150px auto;   
+padding:40px 20px;   
+text-align:center;
+}
+.kontakt{
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+
+
+.cookie-banner{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#003366;
+  color:white;
+  padding:15px 25px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  z-index:9999;
+  font-size:14px;
+}
+
+.cookie-banner a{
+  color:#ffffff;
+  text-decoration:underline;
+}
+
+.cookie-close{
+  background:none;
+  border:none;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://www.wolf.eu/en-de" target="_blank">
+    <img src="wolf_logo-Photoroom.png" alt="Wolf Logo" class="wolf-logo">
+  </a>
+
+  <div class="brand">Max Großer</div>
+
+  <nav class="nav" id="nav">
+    <a href="#start">Start</a>
+    <a href="#about">Über uns</a>
+    <a href="#services">Leistungen</a>
+    <a href="#ausbildung">Ausbildung</a>
+    <a href="#faq">FAQ</a>
+    <a href="#geschäftszeiten">Geschäftszeiten</a>
+    <a href="#kontakt">Kontakt</a>
+
+  </nav>
+
+  <div class="burger" onclick="toggleMenu()">☰</div>
+</header>
+
+
+<section class="hero">
+  <div class="logo-container">
+    <img src="logogrosser_11zon.jpg" alt="Max Großer Logo">
+  </div>
+</section>
+
+
+
+<section id="start" class="section">
+<div class="content start-container">
+  <div class="start-text">
+    <h2>Meisterbetrieb Max Großer</h2>
+    <h2>Qualität – Professionalität – Zuverlässigkeit</h2>
+    <p>
+     Sie finden in uns einen zuverlässigen Meisterbetrieb für sämtliche anfallenden Arbeiten in den Bereichen der Heizungs- und Sanitärtechnik, der Klimatechnik bis hin zur Wartung Ihrer bestehenden Anlagen.</p>
+      <p class="white-paragraph">
+      </p>
+<p> Fachwissen, moderne technische Ausstattung sowie lösungsorientiertes Handeln lassen uns zu Ihrem starken Partner bei der Umsetzung Ihrer Ideen in sämtlichen Bereichen der Haustechnik werden. </p> 
+
+<p> Umfassenden Beratung, die Erarbeitung von Lösungskonzepten bis hin zur Ausführung –  Sie erhalten alles aus einer Hand.</p>
+
+<p> Von der Sanierung bis zum Neubau – wir finden eine Lösung! </p>
+    </p>
+  </div>
+  
+  
+  <div class="stat">
+    <span id="counter1500">0</span>
+    <p>Zufriedene Kunden</p>
+  </div>
+  
+
+<section id="about" class="section">
+<div class="content about-container">
+  <div class="about-text">
+    <h2>Über uns</h2>
+    <p>
+     Ihr Fachbetrieb für Schöningen und den Landkreis Helmstedt.
+     Da ich bereits in dritter Generation in dem Beruf des Installateurs und Heizungsbauers tätig bin, habe ich dafür eine ganz besondere Leidenschaft entwickelt.
+     Durch meine Kenntnisse und meine Berufserfahrung als Handwerksmeister garantiere ich Ihnen eine fachgerechte Beratung und die professionelle Ausführung Ihres Bauvorhabens.
+     Eine moderne technische Ausstattung sowie lösungsorientiertes Handeln sind die Basis für die Erarbeitung kundenspezifischer Lösungen.
+     Moderne Heizungsanlagen, Bäder oder Klimaanlagen – wir setzen Ihre Wünsche und Anforderungen gerne für Sie um.
+    </p>
+  </div>
+
+  
+</div>
+</section>
+
+<section class="premium-reviews">
+  <div class="reviews-container">
+
+    <div class="reviews-top">
+      <h2>Google Bewertungen</h2>
+      <div class="rating-box">
+        <span class="rating-number">4.0</span>
+        <span class="stars">★★★★</span>
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="slides" id="slides">
+
+        <div class="slide">
+          <p class="review-text">
+           In einer Notsituation, heute bei uns in HE, hat der Juniorchef schnell und professionell geholfen und gearbeitet. Wo findet man das heutzutage noch? Klasse und vielen Dank.
+          </p>
+          <div class="author">
+            <strong>Max Müller</strong>
+            <span>★★★★★</span>
+          </div>
+        </div>
+
+        <div class="slide">
+          <p class="review-text">
+            Firma Großer ist wirklich super! Arbeiten sehr schnell, sauber und zuverlässig. Haben bei uns bereits in mehreren Häusern Aufträge erledigt und es lief immer perfekt ab.
+          </p>
+          <div class="author">
+            <strong>Sebastian Rau</strong>
+            <span>★★★★★</span>
+          </div>
+        </div>
+
+        <div class="slide"> 
+          <p class="review-text">
+           Herr Großer und sein Team haben bei uns eine Wolf Brennwert Heizung installiert. Es ist alles reibungslos abgelaufen. Wir wurden gut beraten und auf unsere Fragen und Wünsche wurde stets eingegangen. Liebe Grüße.
+          </p>
+          <div class="author">
+            <strong>V X</strong>
+            <span>★★★★★</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slider-buttons">
+      <button onclick="prevSlide()">←</button>
+      <button onclick="nextSlide()">→</button>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="services" class="section">
+<div class="content">
+<h2>Unsere Leistungen</h2>
+
+<div class="services-grid">
+  <a href="sanitaer.html" class="service-card">
+    <h3>Sanitär</h3>
+    <p>Moderne Bad- und Wasserlösungen für Komfort und Effizienz.</p>
+  
+    <p> Klicken Sie hier, um mehr zu erfahren.</p>
+  </a>
+
+  <a href="heizung.html" class="service-card">
+    <h3>Heizung</h3>
+    <p>Installation, Wartung und Modernisierung von Heizsystemen.</p>
+   
+    <p>Klicken Sie hier, um mehr zu erfahren.</p>
+  </a>
+</div>
+</div>
+</section>
+
+
+<section id="ausbildung" class="section">
+<div class="content">
+<h2>Ausbildung</h2>
+
+<div class="ausbildung-grid">
+  <a href="ausbildung.html" class="ausbildung-card">
+    <h3>Anlagenmechaniker für Sanitär-, Heizungs- und Klimatechnik</h3>
+    <p>Erlernen Sie die Installation, Wartung und Optimierung von Sanitär-, Heizungs- und Klimaanlagen.</p>
+    
+    <p>Klicken Sie hier, um mehr zu erfahren.</p>
+  </a>
+</div>
+</div>
+</section>
+
+
+<section id="faq" class="section">
+<div class="content">
+<h2 class="faq-title">Häufig gestellte Fragen</h2>
+<div id="faq-container"></div>
+</div>
+</section>
+
+<section id="geschäftszeiten" class="section">
+<div class="content">
+
+<h2>Geschäftszeiten</h2>
+<div class="geschäftszeiten">
+<p><strong>Montag:</strong> 08:00 - 16:00 Uhr</p>
+<p><strong>Dienstag:</strong> 08:00 - 16:00 Uhr</p>
+<p><strong>Mittwoch:</strong> 08:00 - 16:00 Uhr</p>
+<p><strong>Donnerstag:</strong> 08:00 - 16:00 Uhr</p>
+<p><strong>Freitag:</strong> 08:00 - 16:00 Uhr</p>
+<p><strong>Samstag/Sonntag:</strong> geschlossen</p>
+</div>
+</section>
+
+<section id="kontakt" class="section">
+<div class="content">
+
+<h2>Kontakt</h2>
+
+
+<div class="contact-info">
+<p><strong>Email:</strong> info@max-grosser.de</p>
+<p><strong>Adresse:</strong> Bahnhofstraße 22, 38364 Schöningen</p>
+</div>
+
+<section class="gmap-section">
+  <div class="gmap-wrapper">
+
+    
+
+
+ <section class="map-section">
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps?q=Bahnhofstraße+22,+38364+Schöningen&output=embed"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="map-button">
+    <button onclick="openChoice()">In Karten öffnen</button>
+  </div>
+</section>
+
+
+<div class="map-popup" id="mapPopup">
+  <div class="popup-content">
+    <h3>Karten-App auswählen</h3>
+    <a href="https://www.google.com/maps/search/?api=1&query=Bahnhofstraße+22,+38364+Schöningen" target="_blank">
+      Google Maps
+    </a>
+    <a href="http://maps.apple.com/?q=Bahnhofstraße+22,+38364+Schöningen" target="_blank">
+      Apple Karten
+    </a>
+    <button class="close-btn" onclick="closeChoice()">Abbrechen</button>
+  </div>
+</div>
+
+
+
+
+<h3 style="margin-top:40px;">Kontaktformular</h3>
+
+<form action="sendmail.php" method="POST">
+<input type="text" name="name" placeholder="Ihr Name*" required>
+<input type="email" name="email" placeholder="Ihre Email*" required>
+<input type="tel" name="phone" placeholder="Ihre Telefonnummer*" required>
+<textarea name="message" rows="5" placeholder="Ihre Nachricht*" required></textarea>
+<button type="submit" class="send">Nachricht senden</button>
+</form>
+
+</div>
+</section>
+
+
+
+<div class="footer">
+  <p>
+    © Max Großer – Ihr Meisterfachbetrieb aus Schöningen | 
+    <a href="impressum.html" style="color:#003366; text-decoration:underline;">Impressum</a> | 
+    <a href="datenschutz.html" style="color:#003366; text-decoration:underline;">Datenschutz</a> | 
+    <a href="cookies.html" style="color:#003366; text-decoration:underline;">Cookie Einstellungen</a>
+  </p>
+</div>
+<script>
+
+
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("active");
+}
+
+
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("nav").classList.remove("active");
+  });
+});
+
+
+let started=false;
+window.addEventListener("scroll",function(){
+  let section=document.getElementById("about");
+  let pos=section.getBoundingClientRect().top;
+
+  if(pos<window.innerHeight && !started){
+    let el=document.getElementById("counter1500");
+    let count=0;
+    let target=1500;
+    let speed=target/120;
+
+    let interval=setInterval(()=>{
+      count+=speed;
+      if(count>=target){
+        count=target;
+        clearInterval(interval);
+      }
+      el.innerText=Math.floor(count)+"+";
+    },20);
+
+    started=true;
+  }
+});
+
+
+let questions=[
+["Wie schnell bekomme ich einen Termin?","Je nach dringlichkeit ihres Anliegens."],
+["Bieten Sie Notdienst an?","Ja, für dringende Fälle sind wir erreichbar."],
+["Arbeiten Sie mit bestimmten Marken?","Wir verwenden ausschließlich Qualitätsprodukte."],
+["Gibt es Garantie?","Ja, selbstverständlich erhalten Sie Gewährleistung."],
+["Beraten Sie vor Ort?","Ja, wir kommen persönlich vorbei."],
+["Installieren Sie Wärmepumpen?","Ja, inklusive Beratung und Förderhinweise."],
+["Modernisieren Sie alte Heizungen?","Wir tauschen und optimieren bestehende Anlagen."],
+["Kann ich online einen Termin buchen?","Ja, unser Formular steht dafür bereit."]
+];
+
+let container=document.getElementById("faq-container");
+
+questions.forEach(q=>{
+  let item=document.createElement("div");
+  item.className="faq-item";
+  item.innerHTML=`
+    <button>${q[0]} <span class="arrow">▶</span></button>
+    <div class="answer">${q[1]}</div>
+  `;
+  item.querySelector("button").onclick=()=>item.classList.toggle("active");
+  container.appendChild(item);
+});
+
+
+
+let currentIndex = 0;
+const slides = document.getElementById("slides");
+const totalSlides = slides.children.length;
+
+function updateSlider(){
+  slides.style.transform = "translateX(-" + currentIndex * 100 + "%)";
+}
+
+function nextSlide(){
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlider();
+}
+
+function prevSlide(){
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSlider();
+}
+
+function openReview(url){
+  window.open(url, "_blank");
+}
+
+
+setInterval(nextSlide, 5000);
+
+</script>
+
+<script>
+function openChoice() {
+  document.getElementById("mapPopup").style.display = "flex";
+}
+
+function closeChoice() {
+  document.getElementById("mapPopup").style.display = "none";
+}
+function acceptCookies(){
+  document.getElementById("cookie-banner").style.display="none";
+  localStorage.setItem("cookiesAccepted","true");
+}
+
+window.addEventListener("load",function(){
+  if(localStorage.getItem("cookiesAccepted")){
+    document.getElementById("cookie-banner").style.display="none";
+  }
+});
+</script>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern. 
+    <a href="cookies.html">Mehr erfahren</a>
+  </p>
+
+  <button class="cookie-close" onclick="acceptCookies()">✕</button>
+</div>
+</body>
+</html> 
+
